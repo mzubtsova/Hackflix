@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+// step4 import routing logic within our app, we have to import the Web App Router into our project
+import { BrowserRouter } from 'react-router-dom';
+//step3 in order to use Router logic we have to import web app router into our project
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* step 5 in order to enable React control and manage all of the URL within this SPA, we have to wrap Router around our application */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
